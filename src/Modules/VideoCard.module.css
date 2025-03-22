@@ -1,0 +1,103 @@
+.videoCard {
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    padding: 8px;
+    box-sizing: border-box;
+    flex: 1 1 calc(25% - 32px); /* 4 per row minus gap */
+  }
+  .thumbnailContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable interaction */
+    border: none;
+    border-radius: 12px;
+  }
+  
+  .clickOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .videoInfo {
+    display: flex;
+    margin-top: 8px;
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  .meta {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+  }
+  
+  .channel,
+  .views {
+    font-size: 0.875rem;
+    color: #606060;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Responsive tweaks for very small screens */
+  @media (max-width: 480px) {
+    .avatar {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+  
+    .title {
+      font-size: 0.95rem;
+    }
+  
+    .channel,
+    .views {
+      font-size: 0.75rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    .videoCard {
+      flex: 1 1 calc(33.333% - 32px); /* 3 per row */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .videoCard {
+      flex: 1 1 calc(50% - 32px); /* 2 per row */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .videoCard {
+      flex: 1 1 100%; /* 1 per row */
+    }
+  }
+  

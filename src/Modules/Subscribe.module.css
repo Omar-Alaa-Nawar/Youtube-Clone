@@ -1,0 +1,100 @@
+.subscribeBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    gap: 16px;
+  }
+
+  .channelInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+   
+  }
+  
+  .profilePic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  
+  .channelName {
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .verified {
+    color: #606060;
+    font-size: 14px;
+  }
+  
+  .subscribers {
+    font-size: 13px;
+    color: #606060;
+  }
+  
+  .subscribeButton {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 18px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+  }
+  
+  .likeDislike {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f2f2f2;
+    border-radius: 18px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .likesCount {
+    margin-left: 4px;
+  }
+  
+  .separator {
+    margin: 0 8px;
+    color: #ccc;
+  }
+  
+  .iconButton {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f2f2f2;
+    padding: 6px 12px;
+    border-radius: 18px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .moreBtn {
+    background-color: #f2f2f2;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+  .flipIcon {
+  transform: scaleX(-1);
+}
