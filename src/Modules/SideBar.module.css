@@ -1,0 +1,46 @@
+/* Sidebar.module.css */
+.sidebar {
+  background-color: white;
+  height: 100vh;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  
+}
+
+.collapsed {
+  width: 80px;
+}
+
+.expanded {
+  width: 240px;
+  padding: 8px;
+}
+
+.iconWithText {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  gap: 16px;
+  border-radius: 8px;
+}
+
+.iconWithText:hover {
+  background-color: #f2f2f2;
+}
+
+.iconOnly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  margin: 12px 0 4px 16px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #606060;
+}

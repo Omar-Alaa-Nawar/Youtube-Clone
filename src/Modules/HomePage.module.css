@@ -1,0 +1,22 @@
+/* HomePage.module.css */
+
+/* Full page container with column layout (Navbar on top, main area below) */
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Main layout for sidebar and main content */
+.mainLayout {
+  display: flex;
+  flex: 1; /* take up remaining vertical space after Navbar */
+  min-height: calc(100vh - 56px); /* assuming Navbar height is 56px */
+}
+
+/* Content area for the main content, allowing vertical scroll */
+.contentArea {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}

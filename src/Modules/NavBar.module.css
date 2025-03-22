@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.menuIcon {
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+.menuIcon:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light gray like YouTube */
+}
+
+.iconButton {
+  position: relative;
+  background: none;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: #f0f0f0;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  background-color: #cc0000;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 999px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 0 0 2px white;
+}
+.iconsize {
+  font-size: 1.5rem;
+}
+
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f8f8f8;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-right: 8px;
+}
+
+.createButton:hover {
+  background-color: #e0e0e0;
+}
+
+.avatarButton {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-size: large;
+}
+
+.avatarButton:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light gray hover like YouTube */
+}
+
+.avatarIcon {
+  font-size: large;
+  color: #606060; /* YouTube gray icon color */
+}
+.youtubeLogo {
+  height: 20px;
+  margin-left: 14px;
+  margin-right: 6px;
+  object-fit: contain;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .create-button span {
+    display: none;
+  }
+  .bellIcon {
+    font-size: 22px;
+  }
+
+  .badge {
+    font-size: 9px;
+    padding: 2px 5px;
+    top: -1px;
+    right: -1px;
+  }
+
+  .avatarButton {
+    padding: 4px;
+  }
+
+  .avatarIcon {
+    font-size: 22px;
+  }
+
+  .youtube-logo {
+    height: 20px;
+  }
+  .createButton span {
+    display: none;
+  }
+
+  .createButton {
+    padding: 6px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
+}
