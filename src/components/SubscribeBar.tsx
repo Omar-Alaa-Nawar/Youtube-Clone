@@ -1,26 +1,27 @@
 import styles from "../Modules/Subscribe.module.css";
-import Marwan_Serry from "../assets/Marwan_Serry.png";
-
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
+import { SubscribeBarProps } from "../Types/SubscribeBar.types";
 
-function SubscribeBar() {
+
+const SubscribeBar: React.FC<SubscribeBarProps> = ({
+  avatar,
+  channel,
+  subscribers,
+  likes,
+}) => {
   return (
     <div className={styles.subscribeBar}>
       <div className={styles.channelInfo}>
-        <img
-          src={Marwan_Serry}
-          alt="Marwan Serry"
-          className={styles.profilePic}
-        />
+        <img src={avatar} alt={channel} className={styles.profilePic} />
         <div>
           <div className={styles.channelName}>
-            Marwan Serry - مروان سري <span className={styles.verified}>✔</span>
+            {channel} <span className={styles.verified}>✔</span>
           </div>
-          <div className={styles.subscribers}>845K subscribers</div>
+          <div className={styles.subscribers}>{subscribers} subscribers</div>
         </div>
         <button className={styles.subscribeButton}>Subscribe</button>
       </div>
@@ -28,7 +29,7 @@ function SubscribeBar() {
       <div className={styles.actions}>
         <div className={styles.likeDislike}>
           <ThumbUpOutlinedIcon />
-          <span className={styles.likesCount}>36K</span>
+          <span className={styles.likesCount}>{likes}</span>
           <span className={styles.separator}>|</span>
           <ThumbDownAltOutlinedIcon />
         </div>
@@ -44,6 +45,6 @@ function SubscribeBar() {
       </div>
     </div>
   );
-}
+};
 
 export default SubscribeBar;

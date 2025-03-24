@@ -1,12 +1,35 @@
+.videoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
 
-  
+@media (max-width: 426px) {
   .videoGrid {
-    display: flex;
-    flex-wrap: wrap;
+    width: 170%;
+    padding: 0;
+    margin: 0;
+    gap: 0;
     justify-content: flex-start;
-    gap: 16px;
-    padding: 16px;
   }
-  
-  
- 
+}
+@media (max-width: 376px) {
+  .videoGrid {
+    width: 200%;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 325px) {
+  .videoGrid {
+    width: 220%;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    justify-content: flex-start;
+  }
+}

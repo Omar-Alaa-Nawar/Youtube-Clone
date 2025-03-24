@@ -1,12 +1,13 @@
 .videoCard {
-    width: 100%;
-    max-width: 400px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    padding: 8px;
-    box-sizing: border-box;
-    flex: 1 1 calc(25% - 32px); /* 4 per row minus gap */
-  }
+  width: 100%;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  padding: 8px;
+  box-sizing: border-box;
+  flex: 1 1 calc(25% - 32px); /* default for desktop */
+  max-width: 400px; /* ✅ This is new — override the hard 400px */
+}
+
   .thumbnailContainer {
     position: relative;
     width: 100%;
@@ -95,9 +96,10 @@
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 425px) {
     .videoCard {
-      flex: 1 1 100%; /* 1 per row */
+      flex: 1 1 calc(50% - 32px); 
     }
   }
+  
   

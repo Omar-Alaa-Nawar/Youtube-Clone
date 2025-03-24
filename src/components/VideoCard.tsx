@@ -3,12 +3,30 @@ import { useNavigate } from "react-router-dom";
 import styles from "../Modules/VideoCard.module.css";
 import { VideoCardProps } from "../Types/VideoCard.types";
 
-
-const VideoCard: React.FC<VideoCardProps> = ({ videoUrl, title, channel, views, avatar }) => {
+const VideoCard: React.FC<VideoCardProps> = ({
+  videoUrl,
+  title,
+  channel,
+  views,
+  avatar,
+  description,
+  likes,
+  subscribers
+}) => {
   const navigate = useNavigate();
-
   const handleClick = () => {
-    navigate("/videopage");
+    navigate("/videopage", {
+      state: {
+        videoUrl,
+        title,
+        channel,
+        views,
+        avatar,
+        description,
+        likes,
+        subscribers
+      },
+    });
   };
 
   return (
