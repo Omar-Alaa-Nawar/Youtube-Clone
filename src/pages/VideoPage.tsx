@@ -6,6 +6,7 @@ import Videos from "../components/Videos";
 const VideoPage: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen((prev) => !prev);
+  sidebarOpen
 
   const location = useLocation();
   const videoData = location.state;
