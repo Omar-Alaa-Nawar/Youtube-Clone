@@ -1,49 +1,71 @@
+.videoPage {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mainContent {
+  display: flex;
+  max-width: 2560px;
+  width: 100%;
+  gap: 20px;
+}
+
+/* 🎥 Main Video Container */
 .videoContainer {
-    width: 100%;
-    padding: 16px;
-    border-radius: 12px;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+  flex: 7; /* 70% */
+  padding: 16px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.videoTitle {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.videoPlayer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* 📌 Suggested Videos */
+.suggestedVideosContainer {
+  flex: 3; /* 30% */
+  max-width: 400px;
+}
+
+/* 📱 Responsive: Stack layout on small screens */
+@media (max-width: 900px) {
+  .mainContent {
+    flex-direction: column;
   }
-  
-  /* Large screens: apply max-width and margin-left like YouTube */
-  @media (min-width: 769px) {
-    .videoContainer {
-      max-width: 980px;
-      
-      margin-left: 45px;
-    }
+
+  .suggestedVideosContainer {
+    max-width: 100%;
   }
-  
-  .videoTitle {
-    font-size: 20px;
-    margin-top: 10px;
+}
+/* Small screens: full width, no margin-left */
+@media (max-width: 500px) {
+  .videoContainer {
+    width: 155%;
   }
-  
-  .videoPlayer {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
+  .suggestedVideosContainer {
+    max-width: 100%;
   }
-  
-  /* Small screens: full width, no margin-left */
-  @media (max-width: 760px) {
-    .videoContainer {
-      width: 200%;
-      padding: 12px;
-      border-radius: 0;
-      margin-left: 0;
-      max-width: none;
-      margin: auto;
-    }
-  
-    .videoTitle {
-      font-size: 1rem;
-      padding: 6px 8px;
-    }
-  
-    .videoPlayer {
-      border-radius: 12px;
-    }
+}
+
+/* Small screens: full width, no margin-left */
+@media (max-width: 380px) {
+  .videoContainer {
+    width: 180%;
   }
-  
+}
+/* Small screens: full width, no margin-left */
+@media (max-width: 340px) {
+  .videoContainer {
+    width: 210%;
+  }
+}

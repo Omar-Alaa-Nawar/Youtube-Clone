@@ -1,17 +1,36 @@
 .descriptionBox {
-    background-color: #f2f2f2;
-    padding: 12px 16px;
-    border-radius: 12px;
-    font-family: Arial, sans-serif;
-    white-space: pre-wrap;
-    line-height: 1.6;
-    font-size: 14px;
-    position: relative;
-    color: #0f0f0f;
-    direction: rtl;
-    text-align: left;
-    margin-top: 5px;
+  background-color: #f2f2f2;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 14px;
+  position: relative;
+  color: #0f0f0f;
+  direction: rtl;
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* Responsive Font Scaling */
+@media (max-width: 1024px) {
+  .descriptionBox {
+    font-size: 13px;
   }
+}
+
+@media (max-width: 768px) {
+  .descriptionBox {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .descriptionBox {
+    font-size: 11px;
+  }
+}
 
 .firstLine {
   margin-bottom: 8px;
@@ -33,21 +52,20 @@
 }
 
 .toggleButton {
-    background: none;
-    border: none;
-    color: black;
-    font-weight: 600;
-    font-size: 13.5px;
-    cursor: pointer;
-    padding: 4px 0;
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .toggleButton:hover {
-    color: black /* Slight blue change on hover */
-  }
-  
-  .toggleButton:active {
-    transform: scale(0.95); /* Slight shrink on click */
-  }
-  
+  background: none;
+  border: none;
+  color: black;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.toggleButton:hover {
+  color: black; /* Slight blue change on hover */
+}
+
+.toggleButton:active {
+  transform: scale(0.95); /* Slight shrink on click */
+}

@@ -16,9 +16,8 @@ import rawData from "../data/videosdata.json";
 
 import { VideoCardState } from "../Types/VideoCard.types";
 
-
 // Map string keys to imported avatar images
-const avatars: Record<string, string> = {
+export const avatars: Record<string, string> = {
   Marwan_Serry,
   MohamedElboraiyAvatar,
   OmarKhaledAvatar,
@@ -29,7 +28,7 @@ const avatars: Record<string, string> = {
   champ,
   messi,
   software,
-  podu
+  podu,
 };
 const videoData: VideoCardState = rawData as VideoCardState;
 const Main: React.FC = () => {
@@ -42,7 +41,7 @@ const Main: React.FC = () => {
           title={video.title}
           channel={video.channel}
           views={video.views}
-          avatar={avatars[video.avatar]} 
+          avatar={avatars[video.avatar]}
           description={video.description}
           likes={video.likes}
           subscribers={video.subscribers}
@@ -53,6 +52,3 @@ const Main: React.FC = () => {
 };
 
 export default Main;
-
-
-

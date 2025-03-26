@@ -11,7 +11,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
   avatar,
   description,
   likes,
-  subscribers
+  subscribers,
 }) => {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -24,10 +24,11 @@ const VideoCard: React.FC<VideoCardProps> = ({
         avatar,
         description,
         likes,
-        subscribers
+        subscribers,
       },
     });
   };
+  console.log({ avatar });
 
   return (
     <div className={styles.videoCard}>

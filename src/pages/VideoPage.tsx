@@ -16,7 +16,9 @@ const VideoPage: React.FC = () => {
       {videoData ? (
         <Videos {...videoData} /> // pass the props!
       ) : (
-        <p style={{ textAlign: "center", padding: "2rem" }}>No video selected</p>
+        <p style={{ textAlign: "center", padding: "2rem" }}>
+          No video selected
+        </p>
       )}
     </div>
   );

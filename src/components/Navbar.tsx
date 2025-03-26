@@ -13,8 +13,12 @@ interface NavbarProps {
 
 function Navbar({ onMenuClick }: NavbarProps) {
   return (
-    <header className={styles.navbar}>
-      <MenuIcon className={styles.menuIcon} onClick={onMenuClick} style={{ cursor: "pointer" }} />
+    <div className={styles.navbar}>
+      <MenuIcon
+        className={styles.menuIcon}
+        onClick={onMenuClick}
+        style={{ cursor: "pointer" }}
+      />
       <img src={youtubeLogo} alt="YouTube" className={styles.youtubeLogo} />
 
       <SearchBar />
@@ -32,7 +36,7 @@ function Navbar({ onMenuClick }: NavbarProps) {
       <button className={styles.avatarButton} title="Profile">
         <AccountCircleOutlinedIcon className={styles.avatarIcon} />
       </button>
-    </header>
+    </div>
   );
 }
 

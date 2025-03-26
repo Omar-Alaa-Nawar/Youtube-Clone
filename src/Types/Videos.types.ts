@@ -6,7 +6,7 @@ export type VideosProps = {
   subscribers: string;
   likes: string;
   description?: string;
-  
+  views:string;
 };
 
 export type VideosState = VideosProps[];

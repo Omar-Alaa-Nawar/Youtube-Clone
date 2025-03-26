@@ -1,3 +1,4 @@
+/* General Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -7,16 +8,21 @@
   position: sticky;
   top: 0;
   z-index: 10;
+
+  max-width: 100vw;
 }
+
+/* Menu Icon */
 .menuIcon {
   padding: 10px;
   border-radius: 50%;
   transition: background-color 0.2s ease-in-out;
 }
 .menuIcon:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Light gray like YouTube */
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Icon Buttons */
 .iconButton {
   position: relative;
   background: none;
@@ -30,11 +36,11 @@
   border-radius: 50%;
   transition: background-color 0.2s ease;
 }
-
 .iconButton:hover {
   background-color: #f0f0f0;
 }
 
+/* Notification Badge */
 .notificationBadge {
   position: absolute;
   top: -4px;
@@ -50,10 +56,13 @@
   text-align: center;
   box-shadow: 0 0 0 2px white;
 }
+
+/* Icon Size */
 .iconsize {
   font-size: 1.5rem;
 }
 
+/* Create Button */
 .createButton {
   display: flex;
   align-items: center;
@@ -67,11 +76,11 @@
   transition: background-color 0.3s ease;
   margin-right: 8px;
 }
-
 .createButton:hover {
   background-color: #e0e0e0;
 }
 
+/* Avatar Button */
 .avatarButton {
   background-color: white;
   border: none;
@@ -84,58 +93,100 @@
   transition: background-color 0.2s ease-in-out;
   font-size: large;
 }
-
 .avatarButton:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Light gray hover like YouTube */
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .avatarIcon {
   font-size: large;
-  color: #606060; /* YouTube gray icon color */
+  color: #606060;
 }
+
+/* YouTube Logo */
 .youtubeLogo {
-  height: 20px;
+  height: 24px;
   margin-left: 14px;
   margin-right: 6px;
   object-fit: contain;
 }
 
-/* Responsiveness */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .create-button span {
+  /* Hide text inside the create button */
+  .createButton span {
     display: none;
   }
+
+  /* Reduce icon sizes */
+  .iconsize,
+  .avatarIcon,
   .bellIcon {
     font-size: 22px;
   }
 
-  .badge {
+  /* Adjust notification badge */
+  .notificationBadge {
     font-size: 9px;
     padding: 2px 5px;
     top: -1px;
     right: -1px;
   }
 
+  /* Adjust avatar button */
   .avatarButton {
-    padding: 4px;
+    padding: 6px;
   }
 
-  .avatarIcon {
-    font-size: 22px;
-  }
-
-  .youtube-logo {
+  /* Adjust YouTube logo */
+  .youtubeLogo {
     height: 20px;
   }
-  .createButton span {
-    display: none;
-  }
 
+  /* Make create button circular */
   .createButton {
     padding: 6px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0px 12px;
+  }
+
+  /* Reduce icon button sizes */
+  .iconButton {
+    padding: 6px;
+    margin: 0 4px;
+  }
+
+  .iconsize,
+  .avatarIcon,
+  .bellIcon {
+    font-size: 20px;
+  }
+
+  /* Reduce notification badge further */
+  .notificationBadge {
+    font-size: 8px;
+    padding: 2px 4px;
+    top: 0px;
+    right: 0px;
+    min-width: 16px;
+  }
+
+  /* Adjust create button */
+  .createButton {
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+  }
+
+  /* Adjust YouTube logo */
+  .youtubeLogo {
+    height: 18px;
   }
 }
