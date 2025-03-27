@@ -14,7 +14,7 @@ import software from "../assets/software.png";
 import podu from "../assets/podu.png";
 import rawData from "../data/videosdata.json";
 
-import { VideoCardState } from "../Types/VideoCard.types";
+import { VideoCardState } from "../types/VideoCard.types";
 
 // Map string keys to imported avatar images
 export const avatars: Record<string, string> = {

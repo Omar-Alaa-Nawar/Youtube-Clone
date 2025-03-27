@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../Modules/VideoCard.module.css";
-import { VideoCardProps } from "../Types/VideoCard.types";
+import { VideoCardProps } from "../types/VideoCard.types";
 
 const VideoCard: React.FC<VideoCardProps> = ({
   videoUrl,

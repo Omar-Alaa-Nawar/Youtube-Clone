@@ -4,8 +4,7 @@ import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
-import { SubscribeBarProps } from "../Types/SubscribeBar.types";
-
+import { SubscribeBarProps } from "../types/SubscribeBar.types";
 
 const SubscribeBar: React.FC<SubscribeBarProps> = ({
   avatar,

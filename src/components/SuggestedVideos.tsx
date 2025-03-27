@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../Modules/SuggestedVideos.module.css";
-import { VideosProps } from "../Types/Videos.types";
+import { VideosProps } from "../types/Videos.types";
 import { avatars } from "./Main";
 
 interface SuggestedVideosProps {

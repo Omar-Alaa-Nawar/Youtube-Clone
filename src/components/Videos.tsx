@@ -3,7 +3,7 @@ import styles from "../Modules/Videos.module.css";
 import Comments from "./Comments";
 import Description from "./Description";
 import SubscribeBar from "./SubscribeBar";
-import { VideosProps } from "../Types/Videos.types";
+import { VideosProps } from "../types/Videos.types";
 import SuggestedVideos from "./SuggestedVideos";
 import rawData from "../data/videosdata.json";
 

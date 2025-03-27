@@ -10,27 +10,53 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
 import styles from "../Modules/SideBar.module.css";
-import { SidebarProps } from "../Types/SideBar.types";
-
-
+import { SidebarProps } from "../types/SideBar.types";
 
 const Sidebar: React.FC<SidebarProps> = ({ expanded }) => {
   return (
-    <div className={`${styles.sidebar} ${expanded ? styles.expanded : styles.collapsed}`}>
+    <div
+      className={`${styles.sidebar} ${
+        expanded ? styles.expanded : styles.collapsed
+      }`}
+    >
       {expanded ? (
         <>
-          <div className={styles.iconWithText}><HomeIcon /><span>Home</span></div>
-          <div className={styles.iconWithText}><SmartDisplayIcon /><span>Shorts</span></div>
-          <div className={styles.iconWithText}><SubscriptionsIcon /><span>Subscriptions</span></div>
+          <div className={styles.iconWithText}>
+            <HomeIcon />
+            <span>Home</span>
+          </div>
+          <div className={styles.iconWithText}>
+            <SmartDisplayIcon />
+            <span>Shorts</span>
+          </div>
+          <div className={styles.iconWithText}>
+            <SubscriptionsIcon />
+            <span>Subscriptions</span>
+          </div>
 
           <hr />
 
           <div className={styles.sectionTitle}>You</div>
-          <div className={styles.iconWithText}><HistoryIcon /><span>History</span></div>
-          <div className={styles.iconWithText}><PlaylistPlayIcon /><span>Playlists</span></div>
-          <div className={styles.iconWithText}><VideoLibraryIcon /><span>Your videos</span></div>
-          <div className={styles.iconWithText}><AccessTimeIcon /><span>Watch later</span></div>
-          <div className={styles.iconWithText}><ThumbUpAltOutlinedIcon /><span>Liked videos</span></div>
+          <div className={styles.iconWithText}>
+            <HistoryIcon />
+            <span>History</span>
+          </div>
+          <div className={styles.iconWithText}>
+            <PlaylistPlayIcon />
+            <span>Playlists</span>
+          </div>
+          <div className={styles.iconWithText}>
+            <VideoLibraryIcon />
+            <span>Your videos</span>
+          </div>
+          <div className={styles.iconWithText}>
+            <AccessTimeIcon />
+            <span>Watch later</span>
+          </div>
+          <div className={styles.iconWithText}>
+            <ThumbUpAltOutlinedIcon />
+            <span>Liked videos</span>
+          </div>
 
           <hr />
 
@@ -54,10 +80,22 @@ const Sidebar: React.FC<SidebarProps> = ({ expanded }) => {
         </>
       ) : (
         <>
-          <div className={styles.iconOnly}><HomeIcon /><span>Home</span></div>
-          <div className={styles.iconOnly}><SmartDisplayIcon /><span>Shorts</span></div>
-          <div className={styles.iconOnly}><SubscriptionsIcon /><span>Subs</span></div>
-          <div className={styles.iconOnly}><PersonOutlineIcon /><span>You</span></div>
+          <div className={styles.iconOnly}>
+            <HomeIcon />
+            <span>Home</span>
+          </div>
+          <div className={styles.iconOnly}>
+            <SmartDisplayIcon />
+            <span>Shorts</span>
+          </div>
+          <div className={styles.iconOnly}>
+            <SubscriptionsIcon />
+            <span>Subs</span>
+          </div>
+          <div className={styles.iconOnly}>
+            <PersonOutlineIcon />
+            <span>You</span>
+          </div>
         </>
       )}
     </div>
